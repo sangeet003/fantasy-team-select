@@ -1,0 +1,61 @@
+.player-element {
+  display: block;
+  border: 1px solid #eee;
+  box-shadow: 0 1px 2px #ccc;
+  margin: 10px;
+  padding: 10px 10px 10px 0;
+  text-align: left;
+  border-radius: 3px;
+  background: #FFF;
+}
+
+.info,
+.id {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.id {
+  margin-right: 15px;
+  width: 50px;
+  text-align: center;
+  border-right: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.info .name,
+.info .type,
+.info .cost {
+  display: block;
+  min-width: 150px;
+}
+
+.info .name {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.info .type,
+.info .cost{
+  font-size: 12px;
+}
+
+.player-element .btn {
+  display: inline-block;
+  width: 70px;
+  border-radius: 3px;
+  padding: 5px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.player-element .btn.add {
+  background: green;
+}
+
+.player-element .btn.remove {
+  background: red;
+}

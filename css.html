@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>CSS</title>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="cwrap">
+      <div class="box">
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+        <div class="tooltip">
+          $167 still needed for this project
+        </div>
+
+        <div class="content">
+          <h4><span>Only 3 days left</span> to fund the project.</h4>
+
+          <p>
+            Join the <b>42</b> other donors who have already supported this project. Every dollar helps.
+          </p>
+
+          <div class="give">
+            <div class="input-wrap">
+              <input type="number" name="money" value="50" id="amt">
+            </div>
+            <a href="javascript:void(0);" id="give">Give Now</a>
+          </div>
+
+          <a href="javascript:void(0);" class="why">Why give $50?</a>
+
+        </div>
+
+      </div>
+
+      <div class="actions">
+        <a href="javascript:void(0);">Save for later</a>
+        <a href="javascript:void(0);">Tell your friends</a>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(function(){
+        var total = 5000, current = 167, percent = 0,
+          inp = $('#amt'),
+          text = $('.tooltip'),
+          prog = $('.progress');
+          prog.css('width', ((current / total) * 100) + '%');
+        $('#give').on('click', function() {
+          current += parseInt(inp.val());
+          if(current < total){
+            text.text('$' + (total - current) + ' still needed for this project');
+          } else {
+            text.text('Received $' + current + ' for this project');
+          }
+          prog.css('width', ((current / total) * 100) + '%');
+        })
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+.top {
+  width: 100%;
+  text-align: left;
+}
+.form-group {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.team-info {
+  width: 1200px;
+  text-align: center;
+}
+.players {
+  padding: 10px;
+  border: 1px solid #CCC;
+  display: inline-block;
+  border-radius: 5px;
+  min-width: 370px;
+  vertical-align: top;
+  margin-right: 20px;
+  height: 600px;
+  background: #f9f9f9;
+}
+
+.players h4 {
+  margin: 5px 0;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.players ul {
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+  max-height: 500px;
+  overflow-x: auto;
+}
+
+.no-selected {
+  text-align: center;
+  font-size: 13px;
+  display: block;
+  margin: 15px 0;
+}

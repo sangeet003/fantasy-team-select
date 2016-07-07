@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>{{title}}</h1>
+    <form>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" required [(ngModel)]="username" >
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password"  class="form-control"
+          [(ngModel)]="password">
+      </div>
+      <button type="submit" class="btn btn-default" (click)="doLogin(username, password)">Login</button>
+      <small>{{error}}</small>
+    </form>
+</div>

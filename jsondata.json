@@ -1,0 +1,266 @@
+[
+  {
+    "name":"David Accam"
+    ,"type":"Attacker"
+    ,"cost":"650,000.00"
+  },
+  {
+    "name":"Kingsley Bryce"
+    ,"type":"Mid-Fielder"
+    ,"cost":"50,000.00"
+  },
+  {
+    "name":"Jon Busch"
+    ,"type":"Goal-Keeper"
+    ,"cost":"85,000.00"
+  },
+  {
+    "name":"Greg Cochrane"
+    ,"type":"Defender"
+    ,"cost":"60,000.00"
+  },
+  {
+    "name":"Razvan Cocis"
+    ,"type":"Mid-Fielder"
+    ,"cost":"220,000.00"
+  },
+  {
+    "name":"Daneil Cyrus"
+    ,"type":"Defender"
+    ,"cost":"72,000.00"
+  },
+  {
+    "name":"Patrick Doody"
+    ,"type":"Defender"
+    ,"cost":"50,000.00"
+  },
+  {
+    "name":"Collin Fernandez"
+    ,"type":"Mid-Fielder"
+    ,"cost":"65,000.00"
+  },
+  {
+    "name":"Adailton Filho"
+    ,"type":"Defender"
+    ,"cost":"200,000.00"
+  },
+  {
+    "name":"Eric Gehrig"
+    ,"type":"Mid-Fielder"
+    ,"cost":"95,000.00"
+  },
+  {
+    "name":"Ty Harden"
+    ,"type":"Defender"
+    ,"cost":"71,663.00"
+  },
+  {
+    "name":"Kennedy Igboananike"
+    ,"type":"Attacker"
+    ,"cost":"800,000.00"
+  },
+  {
+    "name":"Jason Johnson"
+    ,"type":"Attacker"
+    ,"cost":"90,000.00"
+  },
+  {
+    "name":"Sean Johnson"
+    ,"type":"Goal-Keeper"
+    ,"cost":"250,000.00"
+  },
+  {
+    "name":"Joevin Jones"
+    ,"type":"Mid-Fielder"
+    ,"cost":"60,000.00"
+  },
+  {
+    "name":"Gilberto Junior"
+    ,"type":"Attacker"
+    ,"cost":"1,144,992.00"
+  },
+  {
+    "name":"Alec Kann"
+    ,"type":"Goal-Keeper"
+    ,"cost":"60,000.00"
+  },
+  {
+    "name":"Jeff Larentowicz"
+    ,"type":"Defender"
+    ,"cost":"265,000.00"
+  },
+  {
+    "name":"Mike Magee"
+    ,"type":"Attacker"
+    ,"cost":"400,000.00"
+  },
+  {
+    "name":"Patrick Nyarko"
+    ,"type":"Attacker"
+    ,"cost":"200,000.00"
+  },
+  {
+    "name":"Lovel Palmer"
+    ,"type":"Mid-Fielder"
+    ,"cost":"118,000.00"
+  },
+  {
+    "name":"Matt Polster"
+    ,"type":"Defender"
+    ,"cost":"60,000.00"
+  },
+  {
+    "name":"Chris Ritter"
+    ,"type":"Mid-Fielder"
+    ,"cost":"60,000.00"
+  },
+  {
+    "name":"Harrison Shipp"
+    ,"type":"Attacker"
+    ,"cost":"87,500.00"
+  },
+  {
+    "name":"Michael Stephens"
+    ,"type":"Mid-Fielder"
+    ,"cost":"95,000.00"
+  },
+  {
+    "name":"Matt Watson"
+    ,"type":"Mid-Fielder"
+    ,"cost":"80,620.00"
+  },
+  {
+    "name":"Harrison Afful"
+    ,"type":"Defender"
+    ,"cost":"150,000.00"
+  },
+  {
+    "name":"Chad Barson"
+    ,"type":"Defender"
+    ,"cost":"60,000.00"
+  },
+  {
+    "name":"Sergio Campbell"
+    ,"type":"D/M"
+    ,"cost":"50,000.00"
+  },
+  {
+    "name":"Steve Clark"
+    ,"type":"Goal-Keeper"
+    ,"cost":"170,000.00"
+  },
+  {
+    "name":"Ethan Finlay"
+    ,"type":"Attacker"
+    ,"cost":"135,000.00"
+  },
+  {
+    "name":"Waylon Francis"
+    ,"type":"Defender"
+    ,"cost":"144,000.00"
+  },
+  {
+    "name":"Romain Gall"
+    ,"type":"Mid-Fielder"
+    ,"cost":"60,000.00"
+  },
+  {
+    "name":"Kevan George"
+    ,"type":"Mid-Fielder"
+    ,"cost":"60,000.00"
+  },
+  {
+    "name":"Federico Higuain"
+    ,"type":"M-F"
+    ,"cost":"1,175,000.00"
+  },
+  {
+    "name":"Hector Jimenez"
+    ,"type":"Mid-Fielder"
+    ,"cost":"90,000.00"
+  },
+  {
+    "name":"Kei Kamara"
+    ,"type":"Attacker"
+    ,"cost":"400,000.00"
+  },
+  {
+    "name":"Chris Klute"
+    ,"type":"Defender"
+    ,"cost":"82,500.00"
+  },
+  {
+    "name":"Matt Lampson"
+    ,"type":"Goal-Keeper"
+    ,"cost":"60,000.00"
+  },
+  {
+    "name":"Sagi Lev-Ari"
+    ,"type":"Attacker"
+    ,"cost":"60,000.00"
+  },
+  {
+    "name":"Cedrick Mabwati"
+    ,"type":"Mid-Fielder"
+    ,"cost":"201,428.52"
+  },
+  {
+    "name":"Jack McInerney"
+    ,"type":"Attacker"
+    ,"cost":"270,000.00"
+  },
+  {
+    "name":"Justin Meram"
+    ,"type":"Attacker"
+    ,"cost":"165,000.00"
+  },
+  {
+    "name":"Michael Parkhurst"
+    ,"type":"Defender"
+    ,"cost":"275,000.00"
+  },
+  {
+    "name":"Emanuel Pogatetz"
+    ,"type":"Defender"
+    ,"cost":"250,000.00"
+  },
+  {
+    "name":"Mohammed Saeid"
+    ,"type":"Mid-Fielder"
+    ,"cost":"100,000.00"
+  },
+  {
+    "name":"Gaston Sauro"
+    ,"type":"Defender"
+    ,"cost":"583,200.00"
+  },
+  {
+    "name":"Aaron Schoenfeld"
+    ,"type":"Attacker"
+    ,"cost":"60,000.00"
+  },
+  {
+    "name":"Ben Speas"
+    ,"type":"Attacker"
+    ,"cost":"68,355.00"
+  },
+  {
+    "name":"Kristinn Steindorsson"
+    ,"type":"Mid-Fielder"
+    ,"cost":"105,000.00"
+  },
+  {
+    "name":"Brad Stuver"
+    ,"type":"Goal-Keeper"
+    ,"cost":"60,000.00"
+  },
+  {
+    "name":"Ben Swanson"
+    ,"type":"Mid-Fielder"
+    ,"cost":"60,000.00"
+  },
+  {
+    "name":"Tony Tchani"
+    ,"type":"Mid-Fielder"
+    ,"cost":"170,000.00"
+  }]

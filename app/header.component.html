@@ -1,0 +1,13 @@
+<div class="signout">
+  <span (click)="onSignOut()">Sign out</span>
+</div>
+<div class="stats">
+  <span>Available Money: <b>{{ playerService.money | currency:'USD':true }}</b></span>
+  <span>Used Money: <b>{{ playerService.initMoney - playerService.money | currency:'USD':true }}</b></span>
+  <span>Players Selected: <b>{{ (playerService.players | selected : 'true').length }}</b> (Required: 15)</span>
+  <span></span>
+  <span>Goal-Keepers: <b>{{ (playerService.players | type:'Goal-Keeper' | selected : true).length }}</b> (Min: 1)</span>
+  <span>Mid-Fielders: <b>{{ (playerService.players | type:'Mid-Fielder' | selected : true).length }}</b></span>
+  <span>Defenders: <b>{{ (playerService.players | type:'Defender' | selected : true).length }}</b> (Min: 3)</span>
+  <span>Attackers: <b>{{ (playerService.players | type:'Attacker' | selected : true).length }}</b> (Min: 1)</span>
+</div>

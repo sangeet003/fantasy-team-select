@@ -1,0 +1,106 @@
+<div class="team-info">
+  <form>
+    <div class="top">
+      <div class="form-group">
+        <span>{{playerService.teamName}}</span>
+      </div>
+      <header-renderer></header-renderer>
+    </div>
+    <hr>
+
+    <!-- Selected Players -->
+    <div class="players">
+      <h4>{{ teamComplete ? 'Bench' : 'Selected Players' }}</h4>
+      <span *ngIf="(playerService.players | selected : 'true').length == 0" class="no-selected">No Players Selected</span>
+      <ul class="selected">
+        <li *ngFor="let player of playerService.players | selected : 'true' | positioned : 'false'" dnd-draggable [dragEnabled]="true" [dragData]="player">
+          <player-item  [player]="player"></player-item>
+        </li>
+      </ul>
+    </div>
+    <div class="players formation">
+      <h4>Formation</h4>
+      <div class="formation1">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-offset-4 col-md-4">
+              <div class="dropzone" dnd-droppable (onDropSuccess)="transferDataSuccess($event, 'gk', 0)">
+                <span *ngIf="team.gk[0]" class="name">{{team.gk[0].name}}</span>
+                <span class="pos">Goal-Keeper</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="dropzone" dnd-droppable (onDropSuccess)="transferDataSuccess($event, 'df', 0)">
+                <span *ngIf="team.df[0]" class="name">{{team.df[0].name}}</span>
+                <span class="pos">Defender</span>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="dropzone" dnd-droppable (onDropSuccess)="transferDataSuccess($event, 'df', 1)">
+                <span *ngIf="team.df[1]" class="name">{{team.df[1].name}}</span>
+                <span class="pos">Defender</span>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="dropzone" dnd-droppable (onDropSuccess)="transferDataSuccess($event, 'df', 2)">
+                <span *ngIf="team.df[2]" class="name">{{team.df[2].name}}</span>
+                <span class="pos">Defender</span>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="dropzone" dnd-droppable (onDropSuccess)="transferDataSuccess($event, 'df', 3)">
+                <span *ngIf="team.df[3]" class="name">{{team.df[3].name}}</span>
+                <span class="pos">Defender</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="dropzone" dnd-droppable (onDropSuccess)="transferDataSuccess($event, 'mf', 0)">
+                <span *ngIf="team.mf[0]" class="name">{{team.mf[0].name}}</span>
+                <span class="pos">Mid-Fielder</span>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="dropzone" dnd-droppable (onDropSuccess)="transferDataSuccess($event, 'mf', 1)">
+                <span *ngIf="team.mf[1]" class="name">{{team.mf[1].name}}</span>
+                <span class="pos">Mid-Fielder</span>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="dropzone" dnd-droppable (onDropSuccess)="transferDataSuccess($event, 'mf', 2)">
+                <span *ngIf="team.mf[2]" class="name">{{team.mf[2].name}}</span>
+                <span class="pos">Mid-Fielder</span>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="dropzone" dnd-droppable (onDropSuccess)="transferDataSuccess($event, 'mf', 3)">
+                <span *ngIf="team.mf[3]" class="name">{{team.mf[3].name}}</span>
+                <span class="pos">Mid-Fielder</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-offset-3 col-md-3">
+              <div class="dropzone" dnd-droppable (onDropSuccess)="transferDataSuccess($event, 'at', 0)">
+                <span *ngIf="team.at[0]" class="name">{{team.at[0].name}}</span>
+                <span class="pos">Attacker</span>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="dropzone" dnd-droppable (onDropSuccess)="transferDataSuccess($event, 'at', 1)">
+                <span *ngIf="team.at[1]" class="name">{{team.at[1].name}}</span>
+                <span class="pos">Attacker</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <button type="submit" class="btn btn-default" (click)="onNext()" [disabled]="!teamComplete">Save</button>
+    <button type="submit" class="btn btn-default" [routerLink]="['Home']">Back to Team Selection</button>
+  </form>
+</div>
