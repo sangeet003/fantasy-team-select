@@ -1,8 +1,9 @@
 {
   "name": "BananaBandy_TeamSelect",
   "version": "1.0.0",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "tsc && concurrently \"npm run tsc:w\"",
     "lite": "lite-server",
     "postinstall": "typings install",
     "tsc": "tsc",

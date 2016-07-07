@@ -17,6 +17,7 @@ var LoginComponent = (function () {
     function LoginComponent(router, http) {
         this.router = router;
         this.http = http;
+        this.apiUrl = 'http://fantasy-team-select.herokuapp.com/'; // URL to web api
         this.username = "sangeet";
         this.password = "sangeet";
         this.error = "";
@@ -27,7 +28,7 @@ var LoginComponent = (function () {
             'Content-Type': 'application/json' });
         var data = { name: username, password: password };
         this.http
-            .post('http://localhost:3005/login', JSON.stringify(data), { headers: headers })
+            .post(this.apiUrl + 'login', JSON.stringify(data), { headers: headers })
             .toPromise()
             .then(function (res) {
             var op = res.json();

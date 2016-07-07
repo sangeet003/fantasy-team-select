@@ -1,4 +1,4 @@
-import { Component }         from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router-deprecated';
 import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
@@ -9,6 +9,7 @@ import 'rxjs/add/operator/toPromise';
   styleUrls: ['app/login.component.css']
 })
 export class LoginComponent {
+  private apiUrl = 'http://fantasy-team-select.herokuapp.com/';  // URL to web api
   title: 'Login';
   username: String = "sangeet";
   password: String = "sangeet";
@@ -20,7 +21,7 @@ export class LoginComponent {
       'Content-Type': 'application/json'});
     let data = {name: username, password: password};
     this.http
-         .post('http://localhost:3005/login', JSON.stringify(data), {headers: headers})
+         .post(this.apiUrl + 'login', JSON.stringify(data), {headers: headers})
          .toPromise()
          .then(res => {
            let op = res.json();

@@ -14,7 +14,8 @@ require('rxjs/add/operator/toPromise');
 var PlayerService = (function () {
     function PlayerService(http) {
         this.http = http;
-        this.playersUrl = 'http://localhost:3005/players'; // URL to web api
+        this.apiUrl = 'http://fantasy-team-select.herokuapp.com/'; // URL to web api
+        // private apiUrl = 'http://localhost:3000/';  // URL to web api
         this.players = [];
         this.initMoney = 10000000;
         this.money = 10000000;
@@ -26,7 +27,7 @@ var PlayerService = (function () {
         this.userId = id;
         if (this.loaded)
             return;
-        this.http.get(this.playersUrl)
+        this.http.get(this.apiUrl + 'players')
             .toPromise()
             .then(function (response) {
             _this.players = response.json();
@@ -77,7 +78,7 @@ var PlayerService = (function () {
             'Content-Type': 'application/json' });
         var data = { uid: uid, pid: pid, team_name: teamName };
         return this.http
-            .post('http://localhost:3005/save_team', JSON.stringify(data), { headers: headers })
+            .post(this.apiUrl + 'save_team', JSON.stringify(data), { headers: headers })
             .toPromise()
             .then(function (res) { return res.text(); })
             .catch(this.handleError);
@@ -88,7 +89,7 @@ var PlayerService = (function () {
             'Content-Type': 'application/json' });
         var data = { uid: uid, formation: formation };
         return this.http
-            .post('http://localhost:3005/save_formation', JSON.stringify(data), { headers: headers })
+            .post(this.apiUrl + 'save_formation', JSON.stringify(data), { headers: headers })
             .toPromise()
             .then(function (res) { return res.text(); })
             .catch(this.handleError);
@@ -100,7 +101,7 @@ var PlayerService = (function () {
             'Content-Type': 'application/json' });
         var data = { uid: this.userId };
         this.http
-            .post('http://localhost:3005/get_team', JSON.stringify(data), { headers: headers })
+            .post(this.apiUrl + 'get_team', JSON.stringify(data), { headers: headers })
             .toPromise()
             .then(function (res) {
             var op = res.json();
@@ -150,7 +151,7 @@ var PlayerService = (function () {
     PlayerService.prototype.delete = function (player) {
         var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
-        var url = this.playersUrl + "/" + player.id;
+        var url = this.apiUrl + "players/" + player.id;
         return this.http
             .delete(url, headers)
             .toPromise()
@@ -161,7 +162,7 @@ var PlayerService = (function () {
         var headers = new http_1.Headers({
             'Content-Type': 'application/json' });
         return this.http
-            .post(this.playersUrl, JSON.stringify(player), { headers: headers })
+            .post(this.apiUrl + 'players', JSON.stringify(player), { headers: headers })
             .toPromise()
             .then(function (res) { return res.json().data; })
             .catch(this.handleError);
@@ -170,7 +171,7 @@ var PlayerService = (function () {
     PlayerService.prototype.put = function (player) {
         var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
-        var url = this.playersUrl + "/" + player.id;
+        var url = this.apiUrl + "players/" + player.id;
         return this.http
             .put(url, JSON.stringify(player), { headers: headers })
             .toPromise()

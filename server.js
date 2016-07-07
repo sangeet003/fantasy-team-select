@@ -169,7 +169,7 @@ var renderIndex = function(req, res) {
     res.sendFile(path.resolve(__dirname, 'index.html'));
 }
 restapi.get('/*', renderIndex);
-
-restapi.listen(3005);
+var port = Number(process.env.PORT || 3000);
+restapi.listen(port);
 
 console.log("Submit GET or POST to http://localhost:3005/data");

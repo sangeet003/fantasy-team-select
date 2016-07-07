@@ -4,7 +4,8 @@ import 'rxjs/add/operator/toPromise';
 import { Player } from './player';
 @Injectable()
 export class PlayerService {
-  private playersUrl = 'http://localhost:3005/players';  // URL to web api
+  private apiUrl = 'http://fantasy-team-select.herokuapp.com/';  // URL to web api
+  // private apiUrl = 'http://localhost:3000/';  // URL to web api
   public players: Player[] = [];
   public initMoney: number = 10000000;
   public money: number = 10000000;
@@ -24,7 +25,7 @@ export class PlayerService {
     if(this.loaded)
       return;
 
-    this.http.get(this.playersUrl)
+    this.http.get(this.apiUrl + 'players')
       .toPromise()
       .then(response => {
         this.players = response.json();
@@ -82,7 +83,7 @@ export class PlayerService {
       'Content-Type': 'application/json'});
     let data = {uid: uid, pid: pid, team_name: teamName};
     return this.http
-               .post('http://localhost:3005/save_team', JSON.stringify(data), {headers: headers})
+               .post(this.apiUrl + 'save_team', JSON.stringify(data), {headers: headers})
                .toPromise()
                .then(res => res.text())
                .catch(this.handleError);
@@ -94,7 +95,7 @@ export class PlayerService {
       'Content-Type': 'application/json'});
     let data = {uid: uid, formation: formation};
     return this.http
-               .post('http://localhost:3005/save_formation', JSON.stringify(data), {headers: headers})
+               .post(this.apiUrl + 'save_formation', JSON.stringify(data), {headers: headers})
                .toPromise()
                .then(res => res.text())
                .catch(this.handleError);
@@ -106,7 +107,7 @@ export class PlayerService {
       'Content-Type': 'application/json'});
     let data = {uid: this.userId};
     this.http
-           .post('http://localhost:3005/get_team', JSON.stringify(data), {headers: headers})
+           .post(this.apiUrl + 'get_team', JSON.stringify(data), {headers: headers})
            .toPromise()
            .then(res => {
               let op = res.json();
@@ -158,7 +159,7 @@ export class PlayerService {
   delete(player: Player) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    let url = `${this.playersUrl}/${player.id}`;
+    let url = `${this.apiUrl}players/${player.id}`;
     return this.http
                .delete(url, headers)
                .toPromise()
@@ -170,7 +171,7 @@ export class PlayerService {
     let headers = new Headers({
       'Content-Type': 'application/json'});
     return this.http
-               .post(this.playersUrl, JSON.stringify(player), {headers: headers})
+               .post(this.apiUrl + 'players', JSON.stringify(player), {headers: headers})
                .toPromise()
                .then(res => res.json().data)
                .catch(this.handleError);
@@ -180,7 +181,7 @@ export class PlayerService {
   private put(player: Player) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    let url = `${this.playersUrl}/${player.id}`;
+    let url = `${this.apiUrl}players/${player.id}`;
     return this.http
                .put(url, JSON.stringify(player), {headers: headers})
                .toPromise()
